@@ -2,10 +2,18 @@
   "name": "vue-pug",
   "version": "0.1.0",
   "private": true,
+  "description": "Dockerized Vue Pug PWA starter.",
+  "author": "Michael Alhilly",
+  "email": "michaelalhilly@gmail.com",
+  "license": "ISC",
+  "url": "https://vuejs.org/",
+  "vt": "-v $(PWD):/var/www -w /var/www -p 8080:8080 -p 443:443",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "clear && vue-cli-service serve",
+    "ssl": "clear && vue-cli-service serve --https true",
+    "build": "clear && vue-cli-service build",
+    "lint": "clear && vue-cli-service lint",
+    "inspect": "vue inspect > output.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -24,6 +32,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "raw-loader": "^4.0.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"

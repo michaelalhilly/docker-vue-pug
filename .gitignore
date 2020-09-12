@@ -1,13 +1,17 @@
-.DS_Store
+**/.DS_Store
 node_modules
-/dist
-
+dist
+package-lock.json
+output*
 
 # local env files
 .env.local
 .env.*.local
+certs
 
 # Log files
+*.log
+*.pid
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -21,4 +25,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-node_modules

@@ -1,0 +1,8 @@
+mixin stylesheets(items)
+	each item in items
+		- var media = (item.media === "") ? false : item.media
+		link(rel='stylesheet', href=item.href, media=media)
+
+mixin scripts(files)
+	each file in files
+		script(src=file)
